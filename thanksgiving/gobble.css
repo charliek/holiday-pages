@@ -1,11 +1,18 @@
 body {
     background-color: lemonchiffon;
 }
+#greeting {
+}
 #turkey_pan {
     text-align: center;
+}
+#the_turkey {
+	width: 75%;
 }
 h1#the_message {
     text-align: center;
     color: brown;
     font-family: serif;
+    font-size: 5em;
+    margin-bottom: -1.5em;
 }
