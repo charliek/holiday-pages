@@ -8,15 +8,25 @@ h1#the_message {
     text-align: center;
     color: light-grey;
     font-family: serif;
-    font-size: 5em;
-    margin-bottom: -0.5em;
+    font-size: 8em;
+}
+
+span.green {
+    color: green;
+}
+
+span.red {
+    color: red;
+}
+span.uncolored {
+    color: white;
 }
 
 div#snow-base {
     height: 100px;
     width: 100%;
-    position: absolute; 
-    bottom: 0; 
+    position: absolute;
+    bottom: 0;
     left: 0;
 
     background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
