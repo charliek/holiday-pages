@@ -21,7 +21,7 @@ function colorHeadline() {
         var $span = $letters.eq(random_elem);
 
         $span.removeClass('uncolored');
-        if($letters.length > 0) {
+        if($letters.length > 1) {
             setTimeout(updateColors, updateSpeed);
         }
     }
