@@ -39,7 +39,6 @@ function getPageForDate(refDate) {
         if ( fromDate <= refDate && refDate <= toDate ) {
           // console.log("Setting page to" + this.page);
           page = this.page;
-          alert(page)
         }
     });
     return page;
@@ -52,7 +51,7 @@ function redirectToPage(page) {
     var newPath = '';
     if (currentPath.match(/\/index\.html$/)) {
         newPath = currentPath.replace('/index.html', '/' + page + '/index.html');
-    } else if (curentPath.match(/\/$/)) {
+    } else if (currentPath.match(/\/$/)) {
         newPath = currentPath + page + '/';
     } else {
         newPath = currentPath + '/' + page + '/';
