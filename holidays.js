@@ -15,6 +15,8 @@ var pages = [
         , from: [thisYear, 12, 1],      to: [thisYear, 12, 26] },
     { page: 'coderetreat'
         , from: [thisYear, 12, 8],      to: [thisYear, 12, 9] },
+    { page: 'teotwawki'
+        , from: [thisYear, 12, 21],      to: [thisYear, 12, 22] },
     { page: 'december'
         , from: [thisYear, 12, 27],     to: [(thisYear + 1), 1, 1] }
 ];
