@@ -1,7 +1,24 @@
 $(function() {
     colorHeadline();
+    queueSanta();
 });
 
+
+function queueSanta() {
+    var $santa = $('#santa');
+    var $window = $(window);
+    console.log($santa);
+    console.log($window.width())
+    $santa.css({
+        bottom: '20px',
+        left: (-1* $santa.attr('width')) + 'px',
+        // left: '0px',
+        display: 'block'
+    });
+    $santa.animate({left: $window.width(), bottom: $window.height() / 1.5}, 10000, function(){
+        $santa.css('display', 'none');
+    });
+}
 
 function colorHeadline() {
     var updateSpeed = 400;
@@ -50,4 +67,3 @@ function colorHeadline() {
 
     setTimeout(updateColors, updateSpeed);
 }
-

@@ -22,6 +22,11 @@ span.uncolored {
     color: white;
 }
 
+img#santa {
+    display: none;
+    position: absolute;
+}
+
 div#snow-base {
     height: 100px;
     width: 100%;
