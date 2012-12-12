@@ -7,8 +7,6 @@ $(function() {
 function queueSanta() {
     var $santa = $('#santa');
     var $window = $(window);
-    console.log($santa);
-    console.log($window.width())
     $santa.css({
         bottom: '20px',
         left: (-1* $santa.attr('width')) + 'px',
