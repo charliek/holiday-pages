@@ -3,18 +3,16 @@ $(function() {
     queueSanta();
 });
 
-
 function queueSanta() {
-    var $santa = $('#santa');
+    var $sleigh = $('#sleigh');
     var $window = $(window);
-    $santa.css({
-        bottom: '20px',
-        left: (-1* $santa.attr('width')) + 'px',
-        // left: '0px',
+    $sleigh.css({
+        bottom: '30px',
+        left: (-1* $sleigh.css('width')) + 'px',
         display: 'block'
     });
-    $santa.animate({left: $window.width(), bottom: $window.height() / 1.5}, 10000, function(){
-        $santa.css('display', 'none');
+    $sleigh.animate({left: $window.width(), bottom: $window.height() / 1.2}, 10000, function(){
+        $sleigh.css('display', 'none');
     });
 }
 

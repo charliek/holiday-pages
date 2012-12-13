@@ -9,6 +9,7 @@ h1#the_message {
     color: light-grey;
     font-family: serif;
     font-size: 9em;
+    z-index: 300;
 }
 
 span.green {
@@ -22,9 +23,22 @@ span.uncolored {
     color: white;
 }
 
-img#santa {
+#sleigh {
     display: none;
     position: absolute;
+    width: 800px;
+}
+
+img#santa {
+    position: relative;
+    z-index: 200;
+}
+
+img#nose {
+    position: absolute;
+    top: -6px;
+    left: 711px;
+    z-index: 100;
 }
 
 div#snow-base {
