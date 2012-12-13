@@ -11,7 +11,7 @@ function queueSanta() {
         left: (-1* $sleigh.width()) + 'px',
         display: 'block'
     });
-    $sleigh.animate({left: $window.width(), bottom: $window.height() / 1.2}, 10000, function(){
+    $sleigh.animate({left: $window.width(), bottom: $window.height() / 1.4}, 10000, function(){
         $sleigh.css('display', 'none');
     });
 }
