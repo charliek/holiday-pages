@@ -8,7 +8,7 @@ function queueSanta() {
     var $window = $(window);
     $sleigh.css({
         bottom: '30px',
-        left: (-1* $sleigh.css('width')) + 'px',
+        left: (-1* $sleigh.width()) + 'px',
         display: 'block'
     });
     $sleigh.animate({left: $window.width(), bottom: $window.height() / 1.2}, 10000, function(){
