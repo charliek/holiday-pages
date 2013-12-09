@@ -1,0 +1,178 @@
+@font-face { font-family: JDMelted; src: url('jd_melted.ttf'); }
+
+#movie-title {
+    font-size: 100px;
+    font-family: JDMelted;
+    width: 460px;
+    margin: 0 auto;
+    display: none;
+}
+
+.buildings {
+    white-space: nowrap;
+    overflow: hidden;
+    position:absolute;
+    bottom:0;
+    z-index: 100;
+}
+
+.a-building {
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.building-1 {
+    width: 100px;
+    height: 300px;
+    background-color: black;
+    display: inline-block;
+}
+
+.building-2 {
+    width: 66px;
+    height: 200px;
+    background-color: saddlebrown;
+    display: inline-block;
+}
+
+.building-3 {
+    width: 100px;
+    height: 100px;
+    background-color: firebrick;
+    display: inline-block;
+}
+
+.building-4 {
+    width: 150px;
+    height: 250px;
+    background-color: burlywood;
+    display: inline-block;
+}
+
+.window {
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    margin: 10px;
+    float: left;
+}
+
+.snowzilla {
+    width: 800px;
+    height: auto;
+    position:absolute;
+    bottom: 0;
+    left: -310px;
+    z-index: -100;
+}
+
+.content {
+    display: none;
+}
+
+.oval-speech-border {
+    position:relative;
+    padding:20px 10px;
+    margin:1em auto 10px;
+    font-size: 40px;
+    border:10px solid #2e88c4;
+    text-align:center;
+    color:#333;
+    background:#fff;
+    /* css3 */
+    /*
+    NOTES:
+    -webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
+    -webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
+    Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+    */
+    -webkit-border-top-left-radius:240px 140px;
+    -webkit-border-top-right-radius:240px 140px;
+    -webkit-border-bottom-right-radius:240px 140px;
+    -webkit-border-bottom-left-radius:240px 140px;
+    -moz-border-radius:240px / 140px;
+    border-radius:240px / 140px;
+    z-index: 0;
+}
+
+/* creates larger curve */
+.oval-speech-border:before {
+    content:"";
+    position:absolute;
+    z-index:40;
+    bottom:-40px;
+    right:50%;
+    width:50px;
+    height:30px;
+    border-style:solid;
+    border-width:0 10px 10px 0;
+    border-color:#2e88c4;
+    margin-right:-10px;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-right-radius:80px 50px;
+    -moz-border-radius-bottomright:80px 50px;
+    border-bottom-right-radius:80px 50px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates smaller curve */
+.oval-speech-border:after {
+    content:"";
+    position:absolute;
+    z-index:40;
+    bottom:-40px;
+    right:50%;
+    width:20px;
+    height:31px;
+    border-style:solid;
+    border-width:0 10px 10px 0;
+    border-color:#2e88c4;
+    margin-right:20px;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-right-radius:40px 50px;
+    -moz-border-radius-bottomright:40px 50px;
+    border-bottom-right-radius:40px 50px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates a small circle to produce a rounded point where the two curves meet */
+.oval-speech-border > :first-child:before {
+    content:"";
+    position:absolute;
+    z-index:1;
+    bottom:-40px;
+    right:50%;
+    width:10px;
+    height:10px;
+    margin-right:45px;
+    background:#2e88c4;
+    /* css3 */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+
+/* creates a white rectangle to cover part of the oval border*/
+.oval-speech-border > :first-child:after {
+    content:"";
+    position:absolute;
+    z-index:1;
+    bottom:-10px;
+    right:50%;
+    width:30px;
+    height:15px;
+    background:#fff;
+}
+
+.snowzilla-speak {
+    font-family: JDMelted;
+    position:absolute;
+    left: 240px;
+    top: 0;
+    width: 400px;
+    display: none;
+}
