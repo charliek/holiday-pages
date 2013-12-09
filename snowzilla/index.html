@@ -14,8 +14,7 @@
         <div class="buildings">
             <div ng-repeat="b in buildings track by $index" class="building-{{b}} a-building">
                 <div class="window" ng-repeat="i in getNumber(myNumber) track by $index">
-                    <!--TODO introduce flames?-->
-                    <!--<div class="flame" ng-if="isDivisibleBy3($index)"></div>-->
+                    <div class="flame" ng-if="isDivisibleBy3($index)"></div>
                 </div>
                 <div class="clear:both;"></div>
             </div>
