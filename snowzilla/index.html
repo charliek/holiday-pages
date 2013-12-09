@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Snowzilla!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-app="snowzilla" ng-controller="MainCtrl">
+    <h1 id="movie-title">Snowzilla!</h1>
+    <div class="content">
+        <div class="buildings">
+            <div ng-repeat="b in buildings track by $index" class="building-{{b}} a-building">
+                <div class="window" ng-repeat="i in getNumber(myNumber) track by $index">
+                </div>
+                <div class="clear:both;"></div>
+            </div>
+        </div>
+        <img src="img/snowzilla2.png" class="snowzilla">
+        <blockquote class="oval-speech-border snowzilla-speak">
+            <p>Merry Christmas Everyone!</p>
+        </blockquote>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+    <script src="js/jQueryRotateCompressed.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
