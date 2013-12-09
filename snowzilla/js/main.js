@@ -1,7 +1,22 @@
 $(function() {
 
-    function snowzillaWalkForever() {
+    function screamingPeople() {
+        setTimeout(function() {
+            $('.help-speak-1').show();
+            setTimeout(function() {
+                $('.help-speak-1').hide();
+            }, 4000);
+        }, 4000);
 
+        setTimeout(function() {
+            $('.help-speak-2').show();
+            setTimeout(function() {
+                $('.help-speak-2').hide();
+            }, 4000);
+        }, 20000);
+    }
+
+    function snowzillaWalkForever() {
         var leftStep = true;
         var talking = false;
         function walk() {
@@ -33,7 +48,7 @@ $(function() {
 
     function beginMovie() {
         var duration = 40000;
-        var distance = '+=2000px';
+        var distance = '+=1700px';
 
         showContent();
         $('.snowzilla').animate({
@@ -44,12 +59,13 @@ $(function() {
                 window.location.reload();
             }
         });
-        $('.oval-speech-border').animate({
+        $('.snowzilla-speak').animate({
             'left': distance
         }, {
             duration: duration
         });
         snowzillaWalkForever();
+        screamingPeople();
     }
 
     function titleScreen() {
@@ -61,6 +77,8 @@ $(function() {
             });
         }, 1000);
     }
+
+    $.fn.snow();
 
     titleScreen();
     //showContent();
@@ -83,6 +101,9 @@ angular.module('snowzilla', [
                 return new Array(num);
             };
             $scope.buildings = [1,2,3,4,2,3,1,4,1,2,3,1,4,3,2,1,3,2,1,2,3,4];
+            $scope.isDivisibleBy3 = function(i) {
+                return !!(i % 7 === 0);
+            };
         });
 
 })();
