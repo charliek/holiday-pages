@@ -39,7 +39,10 @@ $(function() {
         $('.snowzilla').animate({
             'left': distance
         }, {
-            duration: duration
+            duration: duration,
+            complete: function() {
+                window.location.reload();
+            }
         });
         $('.oval-speech-border').animate({
             'left': distance
